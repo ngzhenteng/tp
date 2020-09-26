@@ -10,7 +10,7 @@ import java.util.Optional;
  * Stores mapping of prefixes to their respective arguments.
  * Each key may be associated with multiple argument values.
  * Values for a given key are stored in a list, and the insertion ordering is maintained.
- * Keys are unique, but the list of argument values may contain duplicate argument values, i.e. the same argument value
+ * Keys are unique, but the list of argument values may contain duplicate argment values, i.e. the same argument value
  * can be inserted multiple times for the same prefix.
  */
 public class ArgumentMultimap {
