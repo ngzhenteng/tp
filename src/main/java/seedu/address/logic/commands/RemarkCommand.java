@@ -1,5 +1,7 @@
 package seedu.address.logic.commands;
 
+import java.util.List;
+
 import seedu.address.commons.core.Messages;
 import seedu.address.commons.core.index.Index;
 import seedu.address.commons.util.CollectionUtil;
@@ -7,8 +9,6 @@ import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.Model;
 import seedu.address.model.person.Person;
 import seedu.address.model.person.Remark;
-
-import java.util.List;
 
 //@@author ngzhenteng-reused
 //Reused from https://nus-cs2103-ay2021s1.github.io/tp/tutorials/AddRemark.html
@@ -27,8 +27,6 @@ public class RemarkCommand extends Command {
             + "Example: " + COMMAND_WORD + " 1 "
             + "r/ Likes to swim.";
 
-//    public static final String MESSAGE_NOT_IMPLEMENTED_YET = "Remark command not implemented yet";
-
     // Note that the format of index is String cause the toString() method of index is called.
     public static final String MESSAGE_ARGUMENTS = "Index: %1$s, Remark: %2$s";
 
@@ -38,6 +36,11 @@ public class RemarkCommand extends Command {
     private final Index index;
     private final Remark remark;
 
+    /**
+     * Creates a RemarkCommand object which encapsulates a command involving remarks.
+     * @param index index of the person to add a remark to
+     * @param remark contents of the remark to be added
+     */
     public RemarkCommand(Index index, Remark remark) {
         CollectionUtil.requireAllNonNull(index, remark);
 
