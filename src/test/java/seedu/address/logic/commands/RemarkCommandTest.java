@@ -49,13 +49,14 @@ class RemarkCommandTest {
     }
 
     @Test
-    void execute_InvalidIndexUnfilteredList_failure() {
+    void execute_invalidIndexUnfilteredList_failure() {
 
         Index outOfBounds = Index.fromZeroBased(actualModel.getFilteredPersonList().size());
         RemarkCommand remarkCommand = new RemarkCommand(outOfBounds, new Remark("out of bounds!"));
 
-        CommandTestUtil.assertCommandFailure(remarkCommand, actualModel, Messages.MESSAGE_INVALID_PERSON_DISPLAYED_INDEX);
+        CommandTestUtil.assertCommandFailure(remarkCommand, actualModel,
+                Messages.MESSAGE_INVALID_PERSON_DISPLAYED_INDEX);
 
-}
+    }
 
 }
