@@ -1,6 +1,7 @@
 package seedu.address.logic.commands;
 
 import org.junit.jupiter.api.Test;
+
 import seedu.address.commons.core.Messages;
 import seedu.address.commons.core.index.Index;
 import seedu.address.model.Model;
@@ -13,8 +14,8 @@ import seedu.address.testutil.TypicalPersons;
 
 class RemarkCommandTest {
 
-    Model actualModel = new ModelManager(TypicalPersons.getTypicalAddressBook(), new UserPrefs());
-
+    private Model actualModel = new ModelManager(TypicalPersons.getTypicalAddressBook(), new UserPrefs());
+    
     @Test
     void execute_addRemarkUnfilteredList_success() {
 
