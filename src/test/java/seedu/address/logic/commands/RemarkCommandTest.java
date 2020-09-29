@@ -15,7 +15,7 @@ import seedu.address.testutil.TypicalPersons;
 class RemarkCommandTest {
 
     private Model actualModel = new ModelManager(TypicalPersons.getTypicalAddressBook(), new UserPrefs());
-    
+
     @Test
     void execute_addRemarkUnfilteredList_success() {
 
